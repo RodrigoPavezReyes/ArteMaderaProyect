@@ -1,0 +1,75 @@
+@media (max-width:480px){
+    .header-index{
+        height: 11.875rem;
+        img{
+        width: 7.5rem;
+        }
+        h1{
+            font-size: 1.875rem;
+        }
+        h2{
+            font-size: 1.375rem;
+        }
+    }
+    .fondo-catalogo{
+        h1{
+            font-size: 1.875rem;
+            bottom: 1.25rem;
+            left: 1.875rem;
+            letter-spacing: .625rem;
+        }
+    }
+
+    .main-catalogo{
+        grid-template-columns: 1fr;
+        background-color:#bb8f70 ;
+    }
+    .card-catalogo{
+        img{
+            width: 9rem;
+            margin: 1.5rem;
+        }
+
+    }
+
+    .fondo-nosotros{
+        h1 {
+            font-size: 1.875rem;
+            bottom: 1.25rem;
+            left: 1.875rem;
+            letter-spacing: .625rem;
+        }
+
+    }
+    .main-nosotros{
+        h3{
+            font-size: 1.125rem;
+            letter-spacing: .0625rem;
+        }
+        p{
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .fondo-contacto{
+        h1 {
+            font-size: 1.875rem;
+            bottom: 1.25rem;
+            left: 1.875rem;
+            letter-spacing: .625rem;
+        }
+
+    }
+
+    .fondo-hablemos{
+        h1 {
+            font-size: 1.875rem;
+            bottom: 1.25rem;
+            left: 1.875rem;
+            letter-spacing: .625rem;
+        }
+
+    }
+}

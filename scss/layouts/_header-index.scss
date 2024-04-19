@@ -1,0 +1,22 @@
+.header-index{
+    background: linear-gradient(153deg, rgba(93,53,23,1) 0%, rgba(0,0,0,1) 49%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: .625rem;
+    padding-bottom: 3.125rem;
+        h1{
+        color: #C49958;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 500;
+        font-size: 3.4375rem;
+        }
+        h2{
+        color: #C49958;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 300;
+        font-size: 2.1875rem;
+        line-height: .75rem;
+        } 
+};

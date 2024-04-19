@@ -1,0 +1,11 @@
+.header-contacto {
+    width: 100%;
+}
+
+.fondo-contacto {
+    @extend .fondo-catalogo;
+    h1{
+    color: $titulo-contacto-hablemos;
+    text-shadow: $shadow-contacto-hablemos;
+}
+}

@@ -1,0 +1,8 @@
+@mixin cards($width, $border, $margin){
+    width: $width;
+    overflow: hidden;
+    border-radius: $border;    
+    box-shadow: 0rem .125rem .625rem 0rem;
+    transition: all 300ms ease;
+    margin: $margin;
+}

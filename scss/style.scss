@@ -1,0 +1,36 @@
+/**variable y mixins**/
+@import "./utilities/mixins";
+@import "./utilities/variables";
+
+/**reset y tipografias**/
+@import "./base/reset";
+@import "./base/typo";
+
+/**codigo principal**/
+@import "./layouts/header-catalogo";
+@import "./layouts/header-index";
+@import "./layouts/main-index";
+@import "./component/card";
+@import "./layouts/footer";
+@import "./layouts/header-nosotros";
+@import "./layouts/header-contacto";
+@import "./layouts/header-hablemos";
+@import "./layouts/main-catalogo";
+@import "./layouts/main-nosotros";
+@import "./layouts/main-contacto";
+@import "./layouts/main-hablemos";
+
+
+
+/**media querry
+Desktop first - en orden decreciente
+Mobile first - en orden creciente
+**/
+
+@import "./layouts/media/media1024";
+@import "./layouts/media/media960";
+@import "./layouts/media/media768";
+@import "./layouts/media/media640";
+@import "./layouts/media/media480";
+@import "./layouts/media/media375";
+@import "./layouts/media/media320";

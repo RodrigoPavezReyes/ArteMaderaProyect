@@ -1,0 +1,28 @@
+.header-catalogo {
+    width: 100%;
+}
+
+.fondo-catalogo {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    img {
+        width: 100%;
+        
+    }
+
+    h1 {
+        position: absolute;
+        bottom: 3.4375rem;
+        left: 4.6875rem;
+        font-style: $style-h1;
+        font-size: 2.5rem;
+        color: $titulo-catalogo-nosotros;
+        font-family: $font-h1;
+        font-weight: bold;
+        letter-spacing: 1.5625rem;
+        text-shadow: $shadow-catalogo-nosotros;
+        background: none;
+    }
+}

@@ -1,0 +1,74 @@
+/**CARDS INDEX**/
+.card {
+    @include cards(17.8125rem, 4.0625rem, 3.125rem);
+    display: flex;
+
+    &:hover {
+        box-shadow: .3125rem .3125rem .4375rem .25rem;
+        transform: translateY(-3%);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .contenido-card {
+        padding: .625rem;
+        text-align: center;
+
+
+        a {
+            font-size: 1.25rem;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            text-decoration: none;
+            color: black;
+            padding: .625rem;
+            border-radius: 1.875rem;
+            transition: all 400ms ease;
+
+            &:hover {
+                background: #e1e1e1;
+                color: black;
+            }
+
+        }
+    }
+
+}
+
+
+
+/**CARDS CATALOGO**/
+
+.card-catalogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    h3 {
+        font-size: 1.25rem;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-style: italic;
+        letter-spacing: .1875rem;
+    }
+    
+    p{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    img {
+    @include cards(11.875rem, 2.8125rem, 3.75rem);
+    
+    &:hover {
+        box-shadow: .3125rem .3125rem .4375rem .25rem;
+        transform: translateY(-3%);
+    }  
+    
+}
+}
