@@ -15,7 +15,8 @@
     <meta property="og:url" content=https://miproyectoweb-artemadera-rodrigopavez.netlify.app/pages/catalogo>
     <meta property="og:description" content=Catálogo Arte Madera. Mesas, sillas y barras.>
     <meta property="og:type" content=website>
-    <meta property="og:image" content=https://miproyectoweb-artemadera-rodrigopavez.netlify.app/assets/logo-sin-letras.jpg>
+    <meta property="og:image"
+        content=https://miproyectoweb-artemadera-rodrigopavez.netlify.app/assets/logo-sin-letras.jpg>
 
 
     <title>Catalogo | Arte Madera</title>
@@ -74,29 +75,37 @@
 
 
     <main class="main-catalogo">
+        
+        <button id="botonModo">Activar <br> Dark Mode</button>
 
-        <div id="verCarrito" >
-            <img  src="../assets/fotocarrito.png" alt="carrito">
-            <p id="total"></p>
+        <!-- Botón para abrir el modal -->
+        <div class="botonAbrirCarrito">
+            <img id="verCarrito" src="../assets/fotocarrito.png" alt="carrito">
+            <p>Carrito</p>
         </div>
-
-        <div>          
-            <div id="fondoOscurecido"></div>
-
-            <div id="barraLateral" class="cerrada">
-
-                <img id="cerrarCarrito" class="botonCerrar" src="../assets/botonCerrar.png" alt="X">
-
-                <p class="tituloCarrito">Mi Compra </p>
-
-                <div id="contenedorCarrito"></div>
-
-                <button id="vaciarCarrito">Vaciar Carrito</button>
+        <div id="modal" class="claseModal">
+            <div class="modal-content">
+                <!-- Botón para cerrar el modal -->
+                <span id="closeModalBtn" class="close">&times;</span>
+                <!-- Contenido del carrito de compras -->
+                <h2>Carrito de Compras</h2>
+                <h3>El total de la compra es <span id="total"></span></h3>
+                <div 
+                    id="contenedorCarrito">                                   
+                </div>
+                
+                <button id="vaciarCarrito" class="botonVaciar">Vaciar Carrito</button>
             </div>
         </div>
 
 
         <div id="contenedorProductos"></div>
+
+        <div>
+
+
+        </div>
+
 
 
     </main>
@@ -110,12 +119,12 @@
         </p>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
 
-    <script src="../data/stock.js"></script>
+    <script src="../javascript/stock.js"></script>
     <script src="../javascript/main.js"></script>
-    <script src="../javascript/index.js"></script>
-
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

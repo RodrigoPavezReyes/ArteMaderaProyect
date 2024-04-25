@@ -1,3 +1,635 @@
+@charset "UTF-8";
+/**variable y mixins**/
+/**H1 de los html pages**/
+/**reset y tipografias**/
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/**fonts logo**/
+/**  font-family: 'Exo 2', sans-serif; **/
+/**font h1 pages**/
+/**font-family: 'Inter', sans-serif;**/
+/**color Letras logo
+#C49958;
+
+**/
+/**codigo principal**/
+.header-catalogo {
+  width: 100%;
+}
+
+.fondo-catalogo, .fondo-hablemos, .fondo-contacto, .fondo-nosotros {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.fondo-catalogo img, .fondo-hablemos img, .fondo-contacto img, .fondo-nosotros img {
+  width: 100%;
+}
+.fondo-catalogo h1, .fondo-hablemos h1, .fondo-contacto h1, .fondo-nosotros h1 {
+  position: absolute;
+  bottom: 3.4375rem;
+  left: 4.6875rem;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5625rem;
+  text-shadow: 0.125rem 0.125rem rgb(0, 0, 0);
+  background: none;
+}
+
+.header-index {
+  background: linear-gradient(153deg, rgb(93, 53, 23) 0%, rgb(0, 0, 0) 49%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.625rem;
+  padding-bottom: 3.125rem;
+}
+.header-index h1 {
+  color: #C49958;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  font-size: 3.4375rem;
+}
+.header-index h2 {
+  color: #C49958;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  font-size: 2.1875rem;
+  line-height: 0.75rem;
+}
+
+.main-index {
+  background-image: url(../assets/fondo-main-index.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/**CARDS INDEX**/
+.card {
+  width: 17.8125rem;
+  overflow: hidden;
+  border-radius: 4.0625rem;
+  box-shadow: 0rem 0.125rem 0.625rem 0rem;
+  transition: all 300ms ease;
+  margin: 3.125rem;
+  display: flex;
+}
+.card:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.4375rem 0.25rem;
+  transform: translateY(-3%);
+}
+.card img {
+  width: 100%;
+}
+.card .contenido-card {
+  padding: 0.625rem;
+  text-align: center;
+}
+.card .contenido-card a {
+  font-size: 1.25rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  padding: 0.625rem;
+  border-radius: 1.875rem;
+  transition: all 400ms ease;
+}
+.card .contenido-card a:hover {
+  background: #e1e1e1;
+  color: black;
+}
+
+/**CARDS CATALOGO**/
+.card-catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-catalogo h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.1875rem;
+}
+.card-catalogo p {
+  font-size: 1rem;
+  text-align: center;
+}
+.card-catalogo img {
+  width: 11.875rem;
+  overflow: hidden;
+  border-radius: 2.8125rem;
+  box-shadow: 0rem 0.125rem 0.625rem 0rem;
+  transition: all 300ms ease;
+  margin: 3.75rem;
+}
+.card-catalogo img:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.4375rem 0.25rem;
+  transform: translateY(-3%);
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer p {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 1.25rem;
+}
+
+.header.nosotros {
+  width: 100%;
+}
+
+.header-contacto {
+  width: 100%;
+}
+
+.fondo-contacto h1 {
+  color: rgb(0, 0, 0);
+  text-shadow: 0.125rem 0.125rem rgb(255, 255, 255);
+}
+
+.header-hablemos {
+  width: 100%;
+}
+
+.fondo-hablemos h1 {
+  color: rgb(0, 0, 0);
+  text-shadow: 0.125rem 0.125rem rgb(255, 255, 255);
+}
+
+/* Estilos contenedor productos y cards productos */
+#contenedorProductos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cardProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imgCard {
+  width: 11.875rem;
+  overflow: hidden;
+  border-radius: 2.8125rem;
+  box-shadow: 0rem 0.125rem 0.625rem 0rem;
+  transition: all 300ms ease;
+  margin: 3.75rem;
+}
+.imgCard:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.4375rem 0.25rem;
+  transform: translateY(-3%);
+}
+
+.nombreCard {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.1875rem;
+}
+
+.descripcionCard {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.precioCard {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+}
+
+/* Estilos button agregar carrito */
+.buttonAgregar {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.buttonAgregar:hover {
+  background-color: #a5903c;
+}
+
+/*Estilos cards del carrito*/
+.cardProductoCarrito {
+  display: flex;
+  margin: 1rem;
+}
+
+.imgCardCarrito {
+  width: 8rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0rem 0.125rem 0.625rem 0rem;
+  transition: all 300ms ease;
+}
+.imgCardCarrito:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.4375rem 0.25rem;
+  transform: translateY(-3%);
+}
+
+.precioCardCarrito {
+  font-size: 1rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.nombreCardCarrito {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.1875rem;
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.cantidadCardCarrito {
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+#botonModo {
+  font-size: 0.7rem;
+  background-color: #777777;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+/* Estilos del modal */
+.claseModal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+}
+.claseModal h2 {
+  font-size: 1.2rem;
+}
+.claseModal h3 {
+  font-size: 1.2rem;
+}
+
+.dark .modal-content {
+  background-color: black;
+  color: white;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: none;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botonAbrirCarrito {
+  position: fixed;
+  bottom: 90px; /* Ajusta la distancia desde la parte superior de la pantalla */
+  right: 20px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.botonAbrirCarrito img {
+  width: 2rem;
+}
+.botonAbrirCarrito p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.botonVaciar {
+  width: 5rem;
+  font-size: 0.6rem;
+  background-color: #e00000;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.cardProductoCarrito {
+  display: flex;
+  margin: 1rem;
+}
+
+.imgCardCarrito {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0rem 0.125rem 0.625rem 0rem;
+  transition: all 300ms ease;
+}
+.imgCardCarrito:hover {
+  box-shadow: 0.3125rem 0.3125rem 0.4375rem 0.25rem;
+  transform: translateY(-3%);
+}
+
+.precioCardCarrito {
+  font-size: 0.8rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.nombreCardCarrito {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.1875rem;
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.cantidadCardCarrito {
+  font-size: 0.8rem;
+  margin: 0.2rem;
+  margin-left: 1.5rem;
+}
+
+.buttonEliminarCarrito {
+  font-size: 0.8rem;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 3px 7px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  margin-left: 1.5rem;
+}
+
+.main-nosotros {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-nosotros h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.1875rem;
+  margin-left: 3.125rem;
+}
+.main-nosotros p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  color: black;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+  margin-left: 3.125rem;
+  line-height: 3.75rem;
+}
+
+.estructura {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-contacto {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-contacto h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0.125rem;
+  margin-bottom: 2.8125rem;
+  align-self: flex-start;
+  margin-left: 25.5%;
+}
+.main-contacto form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.main-contacto form label {
+  margin-bottom: 0.625rem;
+}
+.main-contacto form input, .main-contacto form .caja-mensaje, .main-contacto form .boton-enviar {
+  padding: 0.625rem;
+  margin-bottom: 0.9375rem;
+  border: 1px solid #ccc;
+  border-radius: 1.25rem;
+  background-color: #bfbfbf;
+}
+.main-contacto form input::placeholder, .main-contacto form .caja-mensaje::placeholder, .main-contacto form .boton-enviar::placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.3125rem;
+}
+.main-hablemos {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-hablemos div {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.main-hablemos a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  color: black;
+  font-style: italic;
+  letter-spacing: 0.3125rem;
+}
+.main-hablemos p {
+  margin-left: 4.5%;
+}
+.main-hablemos .telefono {
+  color: #7D1010;
+  font-size: 1.25rem;
+}
+
+/**media querry
+Desktop first - en orden decreciente
+Mobile first - en orden creciente
+**/
+@media (max-width: 1024px) {
+  .card {
+    width: 12.5rem;
+    margin: 1.25rem;
+  }
+}
+@media (max-width: 960px) {
+  .main-catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  footer p {
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 640px) {
+  .card-catalogo img {
+    width: 6.875rem;
+    margin-top: 1.25rem;
+  }
+  .card-catalogo h3 {
+    font-size: 1rem;
+  }
+  .card-catalogo p {
+    font-size: 0.8125rem;
+  }
+}
+@media (max-width: 480px) {
+  .header-index {
+    height: 11.875rem;
+  }
+  .header-index img {
+    width: 7.5rem;
+  }
+  .header-index h1 {
+    font-size: 1.875rem;
+  }
+  .header-index h2 {
+    font-size: 1.375rem;
+  }
+  .fondo-catalogo h1, .fondo-nosotros h1, .fondo-contacto h1, .fondo-hablemos h1 {
+    font-size: 1.875rem;
+    bottom: 1.25rem;
+    left: 1.875rem;
+    letter-spacing: 0.625rem;
+  }
+  .main-catalogo {
+    grid-template-columns: 1fr;
+    background-color: #bb8f70;
+  }
+  .card-catalogo img {
+    width: 9rem;
+    margin: 1.5rem;
+  }
+  .fondo-nosotros h1 {
+    font-size: 1.875rem;
+    bottom: 1.25rem;
+    left: 1.875rem;
+    letter-spacing: 0.625rem;
+  }
+  .main-nosotros h3 {
+    font-size: 1.125rem;
+    letter-spacing: 0.0625rem;
+  }
+  .main-nosotros p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .fondo-contacto h1 {
+    font-size: 1.875rem;
+    bottom: 1.25rem;
+    left: 1.875rem;
+    letter-spacing: 0.625rem;
+  }
+  .fondo-hablemos h1 {
+    font-size: 1.875rem;
+    bottom: 1.25rem;
+    left: 1.875rem;
+    letter-spacing: 0.625rem;
+  }
+}
+@media (max-width: 375px) {
+  .main-nosotros h3 {
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+  }
+  .main-nosotros p {
+    line-height: 2.5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -39,21 +39,12 @@
                 letter-spacing: .3125rem;
             }
         }
+        .boton-enviar{
+            @extend input
+        }
         
-        textarea {
-            padding: .625rem;
-            margin-bottom: .9375rem;
-            border: 1px solid #ccc;
-            border-radius: 1.25rem;
-            background-color: #bfbfbf;
-            &::placeholder{
-                color: black;
-                font-family: 'Inter', sans-serif;
-                font-size: 1rem;
-                font-style: italic;
-                letter-spacing: .3125rem;
-                
-            }
+        .caja-mensaje{
+            @extend input
         }
     }
 }
